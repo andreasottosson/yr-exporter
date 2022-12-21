@@ -67,7 +67,7 @@ func getWeather(url string) []string {
 
 	var metricsOut []string
 
-	metricsOut = append(metricsOut, fmt.Sprintf("%v_%v %v", prefix, "time", weather.Properties.Timeseries[1].Time))
+	// metricsOut = append(metricsOut, fmt.Sprintf("%v_%v %v", prefix, "time", weather.Properties.Timeseries[1].Time))
 	metricsOut = append(metricsOut, fmt.Sprintf("%v_%v %.1f", prefix, "air_temperature", weather.Properties.Timeseries[1].Data.Instant.Details.AirTemperature))
 	metricsOut = append(metricsOut, fmt.Sprintf("%v_%v %.1f", prefix, "relative_humidity", weather.Properties.Timeseries[1].Data.Instant.Details.RelativeHumidity))
 
